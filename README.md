@@ -8,21 +8,17 @@ This project implements an emotion recognition system using classical machine le
 
 ### Local Binary Patterns (LBP)
 LBP is a texture descriptor that encodes the relationship between a pixel and its neighbors. For a pixel with intensity \(I_c\) and \(P\) surrounding neighbors \(I_p\) on a circle of radius \(R\):
-
-\[
+$$
 LBP_{P,R}(x_c, y_c) = \sum_{p=0}^{P-1} s(I_p - I_c) \cdot 2^p
-\]
-
+$$
 where  
-
-\[
+$$
 s(x) =
 \begin{cases} 
 1 & x \geq 0 \\
 0 & x < 0
 \end{cases}
-\]
-
+$$
 The resulting LBP histogram is normalized and used as a feature vector for the KNN classifier.
 
 ### Histogram of Oriented Gradients (HOG)
